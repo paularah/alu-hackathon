@@ -60,7 +60,7 @@ export default () => {
         <StyledHeader links={navLinks} />
         <Content>
           <Heading>
-            Book Music & Comedy Events
+            Book Arts & Entertainment Events
             <br />
             anywhere in Rwanda
           </Heading>
