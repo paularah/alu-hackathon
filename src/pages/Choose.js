@@ -1,6 +1,11 @@
 import React from "react";
-import ChooseEventAction from "../components/features/ChooseEventAction";
+import AnimationRevealPage from "helpers/AnimationRevealPage.js";
+import ChooseEventAction from "../components/cards/ChooseEventAction";
 
 export default () => {
-  return <ChooseEventAction />;
+  return (
+    <AnimationRevealPage>
+      <ChooseEventAction />
+    </AnimationRevealPage>
+  );
 };
