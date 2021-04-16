@@ -98,7 +98,7 @@ export default ({
   const defaultLogoLink = (
     <LogoLink href="/">
       <img src={logo} alt="logo" />
-      Hack
+      Seba
     </LogoLink>
   );
 

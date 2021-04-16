@@ -43,7 +43,7 @@ export default () => {
         <WideColumn>
           <LogoContainer>
             <LogoImg src={LogoImage} />
-            <LogoText>Hack.</LogoText>
+            <LogoText>Seba.</LogoText>
           </LogoContainer>
           <CompanyDescription>
             Lorem ipsum platform that connects with with lorem ipsum something

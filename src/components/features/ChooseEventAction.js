@@ -69,7 +69,7 @@ export default ({
   return (
     <Container>
       <TwoColumn>
-        {/* <ImageColumn>
+        <ImageColumn>
           <Image
             css={imageCss}
             src={imageSrc}
@@ -78,7 +78,7 @@ export default ({
             imageRounded={imageRounded}
           />
           {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
-        </ImageColumn> */}
+        </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
             <Subheading>{subheading}</Subheading>
