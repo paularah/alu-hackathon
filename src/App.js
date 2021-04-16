@@ -101,8 +101,8 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 // import TermsOfServicePage from "pages/TermsOfService.js";
 // import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
 
-import ComponentRenderer from "ComponentRenderer.js";
-import MainLandingPage from "MainLandingPage.js";
+// import ComponentRenderer from "ComponentRenderer.js";
+import LandingPage from "pages/LandingPage.js";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -111,15 +111,7 @@ export default function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/components/:type/:subtype/:name">
-          <ComponentRenderer />
-        </Route>
-        <Route path="/components/:type/:name">
-          <ComponentRenderer />
-        </Route>
-        <Route path="/">
-          <MainLandingPage />
-        </Route>
+        <Route path="/" exact component={LandingPage} />
       </Switch>
     </Router>
   );
