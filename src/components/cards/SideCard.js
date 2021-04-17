@@ -88,7 +88,7 @@ const SingleCardPage = () => (
         className="max-w-full h-auto"
       />
       <Card.Body>
-        <Card.Title>Card title</Card.Title>
+        <Card.Title>Sunday, 05 March 2021 | 10:00AM </Card.Title>
         <Card.Text>
           Some quick example text to build on the card title and make up the
           bulk of the card&apos;s content.
@@ -105,10 +105,11 @@ const NoImageCard = () => {
     <Card className="w-full md:w-4/12">
       <Card.Body>
         <Card.Title>Card title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card&apos;s content.
-        </Card.Text>
+        <Card.Text2>
+          Entrance Fee
+          <span>5,000 RWF</span>
+        </Card.Text2>
+        <Card.Text3>-1000</Card.Text3>
       </Card.Body>
     </Card>
   );
@@ -124,14 +125,16 @@ const Card = ({ className, children }) => (
 Card.Body = ({ children }) => (
   <div className="block flex-grow flex-shrink p-5">{children}</div>
 );
+
 Card.Title = ({ className, children }) => (
-  <div className={`${className} font-medium text-black-900 mb-3`}>
-    {children}
-  </div>
+  <h5 className={`${className} text-xl mt-4 font-bold`}>{children}</h5>
 );
 Card.Text = ({ children }) => <div className="text-gray-500">{children}</div>;
 const style = {
   boxShadow: "0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%)",
 };
+
+Card.Text2 = ({ children }) => <div className="text-red-500">{children}</div>;
+Card.Text3 = ({ children }) => <div className="text-green-500">{children}</div>;
 
 export default SingleCardPage;

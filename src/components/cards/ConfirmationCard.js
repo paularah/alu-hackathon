@@ -131,13 +131,13 @@ export default ({
               <Plan>
                 <PlanHeader>
                   <span className="nameAndFeaturedContainer">
-                    <span className="bigText">Payment Summary</span>
+                    <div className="text-3xl font-bold">Payment Summary</div>
                   </span>
                 </PlanHeader>
                 <PlanFeatures />
                 <PlanHeader>
                   <span className="nameAndFeaturedContainer">
-                    <span className="bigText">Payment Summary</span>
+                    <span className="">Eb</span>
                   </span>
                   <p className="description">doing stuff</p>
                 </PlanHeader>
