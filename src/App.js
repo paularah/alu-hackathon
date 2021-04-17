@@ -105,6 +105,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import LandingPage from "pages/LandingPage.js";
 import Test from "pages/AboutUs.js";
 import Choose from "pages/Choose.js";
+import Events from "pages/Events.js";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -115,28 +116,9 @@ export default function App() {
       <Switch>
         <Route path="/" exact component={LandingPage} />
         <Route path="/action" exact component={Choose} />
-        <Route path="/events" exact component={Choose} />
+        <Route path="/events" exact component={Events} />
         <Route path="/test" exact component={Test} />
       </Switch>
     </Router>
   );
 }
-
-// export default EventLandingPage;
-// export default HotelTravelLandingPage;
-// export default AgencyLandingPage;
-// export default SaaSProductLandingPage;
-// export default RestaurantLandingPage;
-// export default ServiceLandingPage;
-// export default HostingCloudLandingPage;
-
-// export default LoginPage;
-// export default SignupPage;
-// export default PricingPage;
-// export default AboutUsPage;
-// export default ContactUsPage;
-// export default BlogIndexPage;
-// export default TermsOfServicePage;
-// export default PrivacyPolicyPage;
-
-// export default MainLandingPage;
