@@ -107,6 +107,7 @@ import Test from "pages/BlogIndex";
 import Choose from "pages/Choose.js";
 import Events from "pages/Events.js";
 import Book from "pages/Book.js";
+import Momo from "pages/Momo.js";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -120,6 +121,7 @@ export default function App() {
         <Route path="/events" exact component={Events} />
         <Route path="/book" exact component={Book} />
         <Route path="/test" exact component={Test} />
+        <Route path="/momo" exact component={Momo}></Route>
       </Switch>
     </Router>
   );
