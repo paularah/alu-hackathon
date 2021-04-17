@@ -85,6 +85,7 @@ const CardText = tw.div`p-4 text-gray-900`;
 const CardTitle = tw.h5`text-lg font-semibold group-hover:text-primary-500`;
 const CardContent = tw.p`mt-1 text-sm font-medium text-gray-600`;
 const CardPrice = tw.p`mt-4 text-xl font-bold`;
+const PercentageText = tw.div`text-xs font-bold px-3 rounded py-2 uppercase bg-green-300 text-green-900 leading-none mt-4 sm:mt-0 w-full sm:w-auto text-center`;
 
 const CardMeta = styled.div`
   ${tw`flex flex-row flex-wrap justify-center sm:items-center font-semibold tracking-wide text-gray-600 uppercase text-xs`}
@@ -274,6 +275,7 @@ export default ({
                   <CardText>
                     <CardTitle>Lorem ipsom dolor</CardTitle>
                     <CardContent>Sunday, 05 March 2021 | 10:00 am</CardContent>
+                    <PercentageText>30% capacity</PercentageText>
                     <CardMeta>
                       <CardMetaFeature>
                         <LocationIcon /> Kigali
