@@ -85,7 +85,7 @@ const CardText = tw.div`p-4 text-gray-900`;
 const CardTitle = tw.h5`text-lg font-semibold group-hover:text-primary-500`;
 const CardContent = tw.p`mt-1 text-sm font-medium text-gray-600`;
 const CardPrice = tw.p`mt-4 text-xl font-bold`;
-const PercentageText = tw.div`text-xs font-bold px-3 rounded py-2 uppercase bg-green-300 text-green-900 leading-none mt-4 sm:mt-0 w-full sm:w-auto text-center`;
+const PercentageText = tw.div`text-xs font-bold px-3 rounded py-2 uppercase bg-orange-300 text-orange-900 leading-none mt-4 mb-2 sm:mt-0 w-full sm:w-auto text-center`;
 
 const CardMeta = styled.div`
   ${tw`flex flex-row flex-wrap justify-center sm:items-center font-semibold tracking-wide text-gray-600 uppercase text-xs`}
@@ -108,7 +108,7 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 export default ({
   heading = "Available Events",
   tabs = {
-    Starters: [
+    Arts: [
       {
         imageSrc:
           "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
@@ -190,9 +190,9 @@ export default ({
         url: "#",
       },
     ],
-    Main: getRandomCards(),
-    Soup: getRandomCards(),
-    Desserts: getRandomCards(),
+    Music: getRandomCards(),
+    Drama: getRandomCards(),
+    LiveBand: getRandomCards(),
   },
 }) => {
   /*
