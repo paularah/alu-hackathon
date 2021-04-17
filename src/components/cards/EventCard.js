@@ -24,6 +24,33 @@ const TabControl = styled.div`
   }
 `;
 
+const PlanHeader = styled.div`
+  .nameAndFeaturedContainer {
+    ${tw`flex flex-wrap flex-col sm:flex-row justify-between items-center`}
+  }
+  .name {
+    ${tw`lg:text-lg xl:text-xl font-bold uppercase tracking-wider mr-3`}
+  }
+  .featuredText {
+    ${tw`text-xs font-bold px-3 rounded py-2 uppercase bg-green-300 text-green-900 leading-none mt-4 sm:mt-0 w-full sm:w-auto text-center`}
+  }
+  .pricingContainer {
+    ${tw`mt-6 flex items-end justify-between`}
+    .currentPrice {
+      ${tw`text-lg font-bold leading-none`}
+      .bigText {
+        ${tw`text-3xl font-bold`}
+      }
+    }
+    .oldPrice {
+      ${tw`text-gray-500 text-lg line-through hidden sm:block`}
+    }
+  }
+  .description {
+    ${tw`mt-8 font-medium text-gray-700 lg:text-sm xl:text-base`}
+  }
+`;
+
 const TabContent = tw(
   motion.div
 )`mt-6 flex flex-wrap sm:-mr-10 md:-mr-6 lg:-mr-12`;
@@ -252,7 +279,7 @@ export default ({
                         <LocationIcon /> Kigali
                       </CardMetaFeature>
                     </CardMeta>
-                    <CardPrice>{card.price}</CardPrice>
+                    {/* <CardPrice>{card.price}</CardPrice> */}
                   </CardText>
                 </Card>
               </CardContainer>
