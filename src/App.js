@@ -115,6 +115,7 @@ export default function App() {
       <Switch>
         <Route path="/" exact component={LandingPage} />
         <Route path="/action" exact component={Choose} />
+        <Route path="/events" exact component={Choose} />
         <Route path="/test" exact component={Test} />
       </Switch>
     </Router>

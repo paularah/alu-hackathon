@@ -7,12 +7,14 @@ import {
   SectionHeading,
   Subheading as SubheadingBase,
 } from "components/misc/Headings.js";
+import { Link } from "react-router-dom";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import TeamIllustrationSrc from "images/team-illustration-2.svg";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 import Rectangle1 from "images/rectange1.png";
 import Rectangle2 from "images/rectange2.png";
 import { SectionHeading as HeadingBase } from "components/misc/Headings";
+import { PrimaryLink } from "../headers/light.js";
 
 const SectionImage = styled.div`
   ${(props) =>
@@ -52,20 +54,6 @@ const Subheading = tw(SubheadingBase)`text-center md:text-left`;
 const Heading = tw(HeadingBase)`text-center text-primary-900 leading-snug`;
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
 
-const PrimaryButton = styled(PrimaryButtonBase)((props) => [
-  tw`mt-8 md:mt-8 text-sm inline-block mx-auto md:mx-0`,
-  props.buttonRounded && tw`rounded-full`,
-]);
-
-const CardHoverOverlay = styled(motion.div)`
-  background-color: rgba(255, 255, 255, 0.5);
-  ${tw`absolute inset-0 flex justify-center items-center`}
-`;
-
-const TabContent = tw(
-  motion.div
-)`mt-6 flex flex-wrap sm:-mr-10 md:-mr-6 lg:-mr-12`;
-
 export default ({
   subheading = "Our Expertise",
   heading = (
@@ -93,10 +81,14 @@ export default ({
       <Heading>What would you like to do?</Heading>
       <TwoColumn>
         <ImageColumn>
-          <SectionImage imageSrc={Rectangle1}></SectionImage>
+          <Link to="/events">
+            <SectionImage imageSrc={Rectangle1}></SectionImage>
+          </Link>
         </ImageColumn>
         <ImageColumn>
-          <SectionImage imageSrc={Rectangle2}></SectionImage>
+          <Link to="/create">
+            <SectionImage imageSrc={Rectangle2}></SectionImage>
+          </Link>
         </ImageColumn>
       </TwoColumn>
     </Container>
