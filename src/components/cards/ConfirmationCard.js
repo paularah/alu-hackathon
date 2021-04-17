@@ -8,6 +8,7 @@ import {
 } from "components/misc/Headings.js";
 import TeamIllustrationSrc from "images/team-illustration-2.svg";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
+import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -32,17 +33,56 @@ const DecoratorBlob = styled(SvgDotPattern)(() => [
 
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 
-const Subheading = tw(SubheadingBase)`text-center md:text-left`;
-const Heading = tw(
-  SectionHeading
-)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
+const PlansContainer = tw.div`mt-16 flex flex-col items-center lg:flex-row lg:items-stretch lg:justify-between text-gray-900 font-medium`;
+const Plan = styled.div`
+  ${tw`w-full max-w-sm bg-white rounded-lg shadow-sm py-10 px-6 sm:px-10 lg:px-6 lg:py-10 xl:p-10 mx-3 flex flex-col justify-between mt-16 first:mt-0 lg:mt-0 shadow-raised`}
+`;
 
-const Steps = tw.ul`mt-12`;
-const Step = tw.li`mt-8 flex flex-col md:flex-row items-center md:items-start`;
-const StepNumber = tw.div`font-semibold text-4xl leading-none text-gray-400`;
-const StepText = tw.div`mt-3 md:mt-0 md:ml-6`;
-const StepHeading = tw.h6`leading-none text-xl font-semibold`;
-const StepDescription = tw.p`mt-3 max-w-xs leading-loose text-sm text-gray-600 font-medium`;
+const PlanHeader = styled.div`
+  .nameAndFeaturedContainer {
+    ${tw`flex flex-wrap flex-col sm:flex-row justify-between items-center`}
+  }
+  .name {
+    ${tw`lg:text-lg xl:text-xl font-bold uppercase tracking-wider mr-3`}
+  }
+  .featuredText {
+    ${tw`text-xs font-bold px-3 rounded py-2 uppercase bg-green-300 text-green-900 leading-none mt-4 sm:mt-0 w-full sm:w-auto text-center`}
+  }
+  .pricingContainer {
+    ${tw`mt-6 flex items-end justify-between`}
+    .currentPrice {
+      ${tw`text-lg font-bold leading-none`}
+      .bigText {
+        ${tw`text-3xl font-bold`}
+      }
+    }
+    .oldPrice {
+      ${tw`text-gray-500 text-lg line-through hidden sm:block`}
+    }
+  }
+  .description {
+    ${tw`mt-8 font-medium text-gray-700 lg:text-sm xl:text-base`}
+  }
+`;
+const PlanFeatures = styled.ul`
+  ${tw`mt-10 flex-1 border-t lg:-mx-6 -mx-6 sm:-mx-10 py-10 px-6 sm:px-10 lg:p-6 xl:-mx-10 xl:p-10`}
+  .feature {
+    ${tw`flex items-start mt-6 first:mt-0`}
+    .icon {
+      ${tw`w-6 h-6 text-primary-500 flex-shrink-0`}
+    }
+    .text {
+      ${tw`font-semibold text-primary-900 tracking-wide ml-3`}
+    }
+  }
+`;
+
+const PlanAction = tw.div`mt-4`;
+const ActionButton = styled(PrimaryButtonBase)`
+  ${tw`block text-center text-sm font-semibold tracking-wider w-full text-gray-100 bg-primary-500 px-6 py-4 rounded hover:bg-primary-700 focus:shadow-outline focus:outline-none transition-colors duration-300`}
+`;
+
+const WhiteBackgroundOverlay = tw.div`absolute inset-x-0 bottom-0 h-1/6 lg:h-1/3 bg-white z-0`;
 
 export default ({
   subheading = "Our Expertise",
@@ -56,7 +96,7 @@ export default ({
   imageBorder = false,
   imageShadow = false,
   imageDecoratorBlob = false,
-  textOnLeft = true,
+  textOnLeft = false,
   steps = null,
   decoratorBlobCss = null,
 }) => {
@@ -85,17 +125,32 @@ export default ({
     <Container>
       <TwoColumn>
         <TextColumn textOnLeft={textOnLeft}>
-          <TextContent></TextContent>
+          <TextContent>
+            <PlansContainer>
+              <Plan>
+                <PlanHeader>
+                  <span className="nameAndFeaturedContainer">
+                    <span className="bigText">Payment Summary</span>
+                  </span>
+                </PlanHeader>
+                <PlanFeatures />
+                <PlanHeader>
+                  <span className="nameAndFeaturedContainer">
+                    <span className="bigText">Payment Summary</span>
+                  </span>
+                  <p className="description">doing stuff</p>
+                </PlanHeader>
+
+                <PlanAction>
+                  <ActionButton as="a" href="#">
+                    Pay Now
+                  </ActionButton>
+                </PlanAction>
+              </Plan>
+            </PlansContainer>
+          </TextContent>
         </TextColumn>
-        <ImageColumn>
-          {/* <Image
-            src={imageSrc}
-            imageBorder={imageBorder}
-            imageShadow={imageShadow}
-            imageRounded={imageRounded}
-          />
-          {imageDecoratorBlob && <DecoratorBlob css={decoratorBlobCss} />} */}
-        </ImageColumn>
+        <ImageColumn></ImageColumn>
       </TwoColumn>
     </Container>
   );
