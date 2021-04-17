@@ -83,7 +83,7 @@ const CardReview = tw.div`font-medium text-xs text-gray-600`;
 
 const CardText = tw.div`p-4 text-gray-900`;
 const CardTitle = tw.h5`text-lg font-semibold group-hover:text-primary-500`;
-const CardContent = tw.p`mt-1 text-sm font-medium text-gray-600`;
+const CardContent = tw.p`mt-1 mb-1 text-sm font-medium text-gray-600`;
 const CardPrice = tw.p`mt-4 text-xl font-bold`;
 const PercentageText = tw.div`text-xs font-bold px-3 rounded py-2 uppercase bg-orange-300 text-orange-900 leading-none mt-4 mb-2 sm:mt-0 w-full sm:w-auto text-center`;
 

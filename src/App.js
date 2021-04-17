@@ -103,9 +103,10 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 
 // import ComponentRenderer from "ComponentRenderer.js";
 import LandingPage from "pages/LandingPage.js";
-import Test from "pages/AboutUs.js";
+import Test from "pages/BlogIndex";
 import Choose from "pages/Choose.js";
 import Events from "pages/Events.js";
+import Book from "pages/Book.js";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -117,6 +118,7 @@ export default function App() {
         <Route path="/" exact component={LandingPage} />
         <Route path="/action" exact component={Choose} />
         <Route path="/events" exact component={Events} />
+        <Route path="/book" exact component={Book} />
         <Route path="/test" exact component={Test} />
       </Switch>
     </Router>
