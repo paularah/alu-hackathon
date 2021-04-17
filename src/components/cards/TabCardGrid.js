@@ -52,7 +52,7 @@ const CardHoverOverlay = styled(motion.div)`
 const CardButton = tw(PrimaryButtonBase)`text-sm`;
 
 const CardReview = tw.div`font-medium text-xs text-gray-600`;
-
+const CardCompany = tw.div`text-primary-500 font-bold text-lg`;
 const CardText = tw.div`p-4 text-gray-900`;
 const CardTitle = tw.h5`text-lg font-semibold group-hover:text-primary-500`;
 const CardContent = tw.p`mt-1 text-sm font-medium text-gray-600`;

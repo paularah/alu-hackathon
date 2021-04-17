@@ -1,6 +1,10 @@
 import React from "react";
 import EventCard from "components/cards/EventCard";
-
+import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 export default () => {
-  return <EventCard></EventCard>;
+  return (
+    <AnimationRevealPage>
+      <EventCard></EventCard>
+    </AnimationRevealPage>
+  );
 };
